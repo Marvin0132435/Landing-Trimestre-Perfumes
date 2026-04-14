@@ -1,0 +1,733 @@
+.carrito_flotante {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 200;
+  background-color: #1a0810;
+  color: #f5d49a !important;
+  border: 1px solid #c4956a;
+  border-radius: 99px;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carrito_flotante:hover {
+  background-color: #8b1a2e;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(139, 26, 46, 0.35);
+}
+
+.carrito_flotante:hover svg {
+  stroke: white;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero_bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fadeIn 2s ease both;
+}
+
+.hero_overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(28, 8, 16, 0.88) 0%, rgba(28, 8, 16, 0.4) 55%, transparent 100%);
+  z-index: 1;
+}
+
+.hero_contenido {
+  position: relative;
+  z-index: 2;
+  padding: 0 80px 80px;
+  animation: slideUp 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+
+.hero_tag {
+  font-size: 13px !important;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f5d49a !important;
+  font-weight: 600 !important;
+  margin-bottom: 18px;
+  opacity: 1 !important;
+}
+
+.hero_titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 80px;
+  font-weight: 400 !important;
+  line-height: 1;
+  color: #ffffff !important;
+  margin-bottom: 22px;
+  opacity: 1 !important;
+}
+
+.hero_sub {
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  margin-bottom: 34px;
+  opacity: 1 !important;
+}
+
+.hero_btn {
+  display: inline-block;
+  padding: 14px 40px;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease, transform 0.25s ease;
+}
+
+.hero_btn:hover {
+  background-color: #f5d49a;
+  border-color: #f5d49a;
+  color: #1a0810 !important;
+  transform: translateY(-2px);
+}
+
+.intro {
+  padding: 80px 120px;
+  background-color: #f0e8de;
+  text-align: center;
+  border-top: 1px solid #dcc8bc;
+  border-bottom: 1px solid #dcc8bc;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro::before {
+  content: '';
+  position: absolute;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 280px;
+  color: #c4956a;
+  opacity: 0.08;
+  top: -40px;
+  left: 60px;
+  line-height: 1;
+}
+
+.intro_texto {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400 !important;
+  color: #0d0005 !important;
+  line-height: 1.85;
+  max-width: 740px;
+  margin: 0 auto;
+  position: relative;
+  opacity: 1 !important;
+}
+
+.sec_tag {
+  font-size: 13px !important;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8b1a2e !important;
+  font-weight: 600 !important;
+  margin-bottom: 10px;
+  opacity: 1 !important;
+}
+
+.sec_titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 44px;
+  font-weight: 500 !important;
+  color: #1a0810 !important;
+  opacity: 1 !important;
+}
+
+.sec_titulo.claro {
+  color: #ffffff !important;
+}
+
+.sec_header {
+  padding: 0 60px;
+  margin-bottom: 36px;
+}
+
+.sec_header.oscuro {
+  background-color: #1a0810;
+  padding-top: 60px;
+}
+
+@keyframes scroll_loop {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.carrusel_sec {
+  padding: 64px 0 72px;
+  background-color: rgb(235, 229, 229);
+  overflow: hidden;
+}
+
+.carrusel_viewport {
+  overflow: hidden;
+  padding: 6px 0 20px;
+}
+
+.carrusel_track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll_loop 32s linear infinite;
+}
+
+.carrusel_viewport:hover .carrusel_track {
+  animation-play-state: paused;
+}
+
+.descuento_sec {
+  background-color: #1a0810;
+  padding-bottom: 72px;
+}
+
+.descuento_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 60px;
+}
+
+.coleccion {
+  padding: 72px 60px;
+  background-color: #f7f4f0;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  background-color: #fbdcc9;
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #ede8e2;
+  box-shadow: 0 2px 12px rgba(45, 10, 20, 0.07);
+  transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.38s ease, border-color 0.38s ease;
+}
+
+.grid3 .card,
+.descuento_grid .card {
+  width: auto;
+}
+
+.card:hover {
+  transform: translateY(-7px) scale(1.01);
+  box-shadow: 0 20px 48px rgba(45, 10, 20, 0.15);
+  border-color: #c4956a;
+  z-index: 1;
+}
+
+.card_img {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 14px 14px 0 0;
+}
+
+.card_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover .card_img img {
+  transform: scale(1.06);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(45, 10, 20, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.4s ease;
+  border-radius: 14px 14px 0 0;
+}
+
+.card:hover .overlay {
+  background: rgba(45, 10, 20, 0.44);
+}
+
+.overlay_btn {
+  display: inline-block;
+  background-color: #f0e0d6;
+  color: #1a0810 !important;
+  padding: 11px 30px;
+  border-radius: 2px;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .overlay_btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay_btn:hover {
+  background-color: #c4956a;
+  color: #ffffff !important;
+}
+
+.card_body {
+  padding: 18px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  border-top: 1px solid #f0ebe5;
+}
+
+.card_marca {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8b1a2e !important;
+  opacity: 1 !important;
+}
+
+.card_nombre {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  font-weight: 500 !important;
+  color: #1a0810 !important;
+  line-height: 1.2;
+  opacity: 1 !important;
+}
+
+.card_des {
+  font-size: 13px;
+  font-weight: 400 !important;
+  color: #3a1a20 !important;
+  line-height: 1.6;
+  flex: 1;
+  opacity: 1 !important;
+}
+
+.card_notas {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: #faf5ef;
+  border: 1px solid #e8ddd2;
+  border-radius: 99px;
+  padding: 4px 11px;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8b1a2e !important;
+  margin-top: 2px;
+  opacity: 1 !important;
+}
+
+.card_pie {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.precio {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500 !important;
+  color: #1a0810 !important;
+  opacity: 1 !important;
+}
+
+.precio_tachado {
+  font-size: 13px;
+  font-weight: 400 !important;
+  color: #6a4a50 !important;
+  text-decoration: line-through;
+  opacity: 1 !important;
+}
+
+.ml {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #4a2a30 !important;
+  opacity: 1 !important;
+}
+
+.ahorro {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #8b1a2e !important;
+  opacity: 1 !important;
+}
+
+.badge {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  z-index: 2;
+  font-family: 'Jost', sans-serif;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 99px;
+}
+
+.badge.nuevo {
+  background-color: #1a0810;
+  color: #f5d49a !important;
+}
+
+.badge.desc {
+  background-color: #8b1a2e;
+  color: #ffffff !important;
+}
+
+.porque {
+  padding: 80px;
+  background-color: rgb(235, 229, 229);
+  border-top: 1px solid #ede8e3;
+}
+
+.porque_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.porque_item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 28px 14px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.porque_item:hover {
+  border-color: #c4956a;
+  transform: translateY(-4px);
+}
+
+.porque_ico {
+  color: #8b1a2e !important;
+}
+
+.porque_item h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  font-weight: 500 !important;
+  color: #1a0810 !important;
+  opacity: 1 !important;
+}
+
+.porque_item p {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #3a1a20 !important;
+  line-height: 1.7;
+  opacity: 1 !important;
+}
+
+.frase {
+  padding: 80px 60px;
+  background-color: #1a0810;
+  background-image: url('../Imagenes/Floral Fragrance Etsy Banner.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+}
+
+.frase::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(45, 10, 20, 0.75);
+}
+
+.frase_quote,
+.frase_autor {
+  position: relative;
+  z-index: 1;
+}
+
+.frase_quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  font-weight: 400 !important;
+  font-style: italic;
+  color: #ffffff !important;
+  line-height: 1.5;
+  max-width: 680px;
+  margin: 0 auto 18px;
+  opacity: 1 !important;
+}
+
+.frase_autor {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f5d49a !important;
+  opacity: 1 !important;
+}
+
+.coleccion_oscura {
+  background: linear-gradient(160deg, #1c0610 0%, #2d0a14 50%, #1a0810 100%);
+  padding: 72px 48px 80px;
+  border-top: 1px solid rgba(196, 149, 106, 0.2);
+  border-bottom: 1px solid rgba(196, 149, 106, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.coleccion_oscura::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 60% 40% at 80% 20%, rgba(196, 149, 106, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 10% 80%, rgba(139, 26, 46, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.coleccion_oscura .sec_header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 44px;
+}
+
+.coleccion_oscura .sec_tag {
+  color: #f5d49a !important;
+  opacity: 1 !important;
+}
+
+.coleccion_oscura .sec_titulo.claro::after {
+  content: '';
+  display: block;
+  width: 52px;
+  height: 1px;
+  background: linear-gradient(90deg, #f5d49a, transparent);
+  margin-top: 16px;
+}
+
+.grid3_oscuro {
+  gap: 20px;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.grid3_oscuro .card {
+  background-color: #4a1828;
+  border-radius: 16px;
+  border: 1px solid rgba(196, 149, 106, 0.25);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(196, 149, 106, 0.08);
+  transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.38s ease, border-color 0.38s ease;
+}
+
+.grid3_oscuro .card:hover {
+  transform: translateY(-7px) scale(1.01);
+  border-color: rgba(196, 149, 106, 0.55);
+  box-shadow:
+    0 22px 52px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(196, 149, 106, 0.25),
+    0 0 32px rgba(196, 149, 106, 0.08);
+}
+
+.grid3_oscuro .card_img {
+  border-radius: 16px 16px 0 0;
+  height: 280px;
+}
+
+.grid3_oscuro .card_img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20, 6, 26, 0.75) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 16px 16px 0 0;
+}
+
+.grid3_oscuro .card:hover .overlay {
+  background: rgba(8, 2, 12, 0.62);
+}
+
+.grid3_oscuro .overlay_btn {
+  background-color: #f5d49a;
+  color: #1a0810 !important;
+  letter-spacing: 0.2em;
+  border-radius: 2px;
+  padding: 12px 32px;
+}
+
+.grid3_oscuro .overlay_btn:hover {
+  background-color: white;
+  color: #1a0810 !important;
+}
+
+.grid3_oscuro .card_body {
+  padding: 20px 22px 26px;
+  border-top: 1px solid rgba(196, 149, 106, 0.12);
+  gap: 7px;
+}
+
+.grid3_oscuro .card_marca {
+  color: #f5d49a !important;
+  letter-spacing: 0.3em;
+  opacity: 1 !important;
+}
+
+.grid3_oscuro .card_nombre {
+  color: #ffffff !important;
+  font-size: 22px;
+  font-weight: 500 !important;
+  line-height: 1.15;
+  opacity: 1 !important;
+}
+
+.grid3_oscuro .card_des {
+  color: #f0d8c8 !important;
+  opacity: 1 !important;
+}
+
+.grid3_oscuro .card_notas {
+  background-color: rgba(196, 149, 106, 0.1);
+  border-color: rgba(196, 149, 106, 0.22);
+  color: #f5d49a !important;
+  opacity: 1 !important;
+}
+
+.grid3_oscuro .card_pie {
+  margin-top: 10px;
+  align-items: center;
+}
+
+.grid3_oscuro .precio {
+  color: #f5d49a !important;
+  font-size: 25px;
+  font-weight: 500 !important;
+  opacity: 1 !important;
+}
+
+.grid3_oscuro .ml {
+  color: #f0d8c8 !important;
+  opacity: 1 !important;
+}
+
+.grid3_oscuro .badge.nuevo {
+  background-color: rgba(196, 149, 106, 0.15);
+  color: #f5d49a !important;
+  border: 1px solid rgba(196, 149, 106, 0.4);
+  backdrop-filter: blur(6px);
+  opacity: 1 !important;
+}
+
+@media (max-width: 900px) {
+  .descuento_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .porque_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .carrito_flotante {
+    bottom: 20px;
+    right: 20px;
+    padding: 13px 18px;
+  }
+
+  .hero_contenido {
+    padding: 0 28px 56px;
+  }
+
+  .hero_titulo {
+    font-size: 46px;
+  }
+
+  .intro {
+    padding: 50px 28px;
+  }
+
+  .sec_header,
+  .coleccion,
+  .porque {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .descuento_grid,
+  .grid3 {
+    grid-template-columns: 1fr;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .porque_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .frase {
+    padding: 56px 24px;
+  }
+
+  .frase_quote {
+    font-size: 22px;
+  }
+
+  .card {
+    width: 260px;
+  }
+}

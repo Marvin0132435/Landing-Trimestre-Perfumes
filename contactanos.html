@@ -8,14 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/contactanos.css">
 </head>
-<body>
+<body class="body">
 
+    <!-- nav !-->
     <nav>
         <div class="nav_logo">Aromas Con Historia</div>
         <input type="checkbox" id="menu_toggle" class="menu_toggle">
-        <label for="menu_toggle" class="hamburguesa"><img src="Imagenes/list.svg" alt="menu"></label>
+        <label for="menu_toggle" class="hamburguesa">
+            <img src="Imagenes/list.svg" alt="menu">
+        </label>
         <ul class="nav_links">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="index.html#coleccion">Fragancias</a></li>
@@ -24,51 +28,137 @@
         </ul>
     </nav>
 
+    <!-- Hero -->
     <section class="con_hero">
-        <h1 class="nos_titulo">¿Tienes algo que decirnos?</h1>
-        <p>Cuentanos tu Experiencia</p>
+        <div class="con_hero_contenido">
+            <p class="con_hero_tag">Contáctanos</p>
+            <h1 class="con_hero_titulo">¿Tienes algo<br>que decirnos?</h1>
+            <p class="con_hero_sub">Cuéntanos tu experiencia o escríbenos directamente.</p>
+        </div>
     </section>
 
+    <!-- dos columnas — info a la izquierda, formulario a la derecha -->
     <section class="con_contenido">
 
-        <div class="con_formulario">
-            <p class="con_seccion_tag">Tu opinión importa</p>
-            <h2 class="con_seccion_titulo">Cuéntanos tu experiencia</h2>
+        <!-- Columna izquierda: contexto, descripción y datos de contacto -->
+        <div class="con_contenido_lado">
+            <p class="con_lado_tag">Tu opinión importa</p>
+            <h2 class="con_lado_titulo">Nos encanta<br>escucharte</h2>
+            <p class="con_lado_texto">Ya sea una sugerencia, una queja o un elogio — todo nos ayuda a mejorar. Escríbenos y te respondemos rápido.</p>
 
+            <!-- Datos de contacto con íconos -->
+            <div class="con_lado_datos">
+
+                <!-- Horario de atención -->
+                <div class="con_lado_dato">
+                    <div class="con_lado_dato_info">
+                        <strong>Horario</strong>
+                        <span>Lun – Vie · 9:00 am a 7:00 pm</span>
+                    </div>
+                </div>
+
+                <!-- WhatsApp directo -->
+                <div class="con_lado_dato">
+                    <div class="con_lado_dato_info">
+                        <strong>WhatsApp</strong>
+                        <span>+57 317 3820834</span>
+                    </div>
+                </div>
+
+                <!-- Ubicación -->
+                <div class="con_lado_dato">
+                    <div class="con_lado_dato_info">
+                        <strong>Ubicación</strong>
+                        <span>Medellín, Colombia</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Columna derecha: formulario de contacto -->
+        <div class="con_formulario">
+            <p class="con_seccion_tag">Escríbenos</p>
+            <h2 class="con_seccion_titulo">Cuéntanos todo</h2>
+
+            <!-- Campo: nombre -->
             <div class="con_campo">
-                <label class="con_label">Nombre</label>
-                <input class="con_input" type="text" placeholder="Tu nombre">
+                <label class="con_label">Tu nombre</label>
+                <input class="con_input" type="text" placeholder="¿Cómo te llamas?">
             </div>
 
+            <!-- Campo: correo opcional -->
             <div class="con_campo">
-                <label class="con_label">Comentario</label>
+                <label class="con_label">Correo electrónico <span class="con_opcional">(opcional)</span></label>
+                <input class="con_input" type="email" placeholder="tu@correo.com">
+            </div>
+
+            <!-- Campo: tema del mensaje -->
+            <div class="con_campo">
+                <label class="con_label">¿Sobre qué nos escribes?</label>
+                <select class="con_input con_select">
+                    <option value="" disabled selected>Selecciona un tema</option>
+                    <option value="pedido">Mi pedido</option>
+                    <option value="producto">Información de un producto</option>
+                    <option value="sugerencia">Sugerencia o mejora</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <!-- Campo: comentario principal -->
+            <div class="con_campo">
+                <label class="con_label">Tu comentario</label>
                 <textarea class="con_textarea" placeholder="¿Qué te pareció? ¿Algo que podamos mejorar?"></textarea>
             </div>
 
-            <button class="con_enviar">Enviar comentario</button>
+            <!-- Botón de envío -->
+            <div class="con_form_footer">
+                <button class="con_enviar">Enviar mensaje</button>
+                <span class="con_respuesta_badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Respondemos en menos de 24h
+                </span>
+            </div>
         </div>
 
     </section>
 
-    <section class="con_info">
-        <div class="con_horario">
-            <p class="con_seccion_tag">Horario de atención</p>
-            <p class="con_horario_texto">Lunes a Viernes · 9:00 am - 7:00 pm</p>
+                 <footer class="brand">
+        <div class="footer_col footer_col_left">
+            <span class="footer_logo">Aromas Con Historia</span>
+            <p class="footer_eslogan">Elige ser inolvidable</p>
+            <div class="footer_info">
+                <div class="footer_info_item">
+                    <span>Medellín, Colombia</span>
+                </div>
+                <div class="footer_info_item">
+                    <span>Lun – Vie · 9:00 am – 7:00 pm</span>
+                </div>
+            </div>
         </div>
-
-        <div class="con_contacto">
-            <p class="con_seccion_tag">Escríbenos directamente</p>
-            <h2 class="con_seccion_titulo">WhatsApp</h2>
-            <p class="con_horario_texto">+57 317 3820834</p>
+        <div class="footer_col footer_col_center">
+            <div class="footer_center_inner">
+                <span class="footer_divider_label">Navega</span>
+                <nav class="footer_links">
+                    <a href="index.html">Inicio</a>
+                    <a href="index.html#coleccion">Fragancias</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contactanos.html">Contacto</a>
+                </nav>
+            </div>
         </div>
-    </section>
-
-    <footer class="brand">
-        <span class="footer_logo">Aromas Con Historia</span>
-        <p>Elige ser inolvidable</p>
+        <div class="footer_col footer_col_right">
+            <div class="footer_contacto">
+                <span class="footer_contacto_label">Escríbenos</span>
+                <div class="footer_whatsapp" target="_blank">
+                    +57 317 3820834
+                <a href="compra.html" class="footer_pedido">Hacer un pedido →</a>
+            </div>
+        </div>
     </footer>
+
     <div class="footer_bottom">
-        <span>© 2026 Aromas Con Historia. Todos los derechos reservados.</span>
+        <span>© 2026 Aromas Con Historia · Medellín, Colombia · Todos los derechos reservados.</span>
     </div>
 
 </body>

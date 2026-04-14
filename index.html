@@ -3,164 +3,621 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| Aroma Con Historia | Perfumes |</title>
+    <title>| Aromas Con Historia | Perfumes |</title>
     <link rel="shortcut icon" href="Imagenes/logo_icono.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
 
     <nav>
         <div class="nav_logo">Aromas Con Historia</div>
         <input type="checkbox" id="menu_toggle" class="menu_toggle">
-        <label for="menu_toggle" class="hamburguesa"><img src="Imagenes/list.svg" alt="menu"></label>
+        <label for="menu_toggle" class="hamburguesa">
+            <img src="Imagenes/list.svg" alt="menu">
+        </label>
         <ul class="nav_links">
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#coleccion">Fragancias</a></li>
+            <li><a href="#coleccion">Fragancias</a></li>
             <li><a href="nosotros.html">Sobre Nosotros</a></li>
             <li><a href="contactanos.html">Contáctanos</a></li>
         </ul>
     </nav>
 
-    <section class="columnas">
-        <div class="columna_izquierda">
-            <h1 class="titulo_columna">
-                El Arte De<br>
-                La Esencia<br>
-                Perfecta
-            </h1>
-            <p class="columna_par">Cada fragancia es una historia sin palabras. Elaboradas con ingredientes raros y técnicas centenarias, nuestras creaciones despiertan emociones que trascienden el tiempo.</p>
-        </div>
-
-        <div class="columna_derecha">
-            <img src="Imagenes/jan-kopriva-nBwdYS1_rgA-unsplash.jpg" alt="imagen perfume">
+    <section class="hero">
+        <div class="hero_overlay"></div>
+        <img src="Imagenes/Banner_Perfumeria_a_medida.jpg" alt="perfume hero" class="hero_bg">
+        <div class="hero_contenido">
+            <p class="hero_tag">Nueva colección · 2026</p>
+            <h1 class="hero_titulo">El Arte De<br>La Esencia<br>Perfecta</h1>
+            <p class="hero_sub">Cada fragancia es una historia sin palabras.</p>
+            <a href="#coleccion" class="hero_btn">Explorar fragancias</a>
         </div>
     </section>
 
-    <div class="frase" style="background-image: url('Imagenes/Floral Fragrance Etsy Banner.png');">
-        <blockquote class="frase_quote">
-            "El perfume es la forma más intensa del recuerdo."
-        </blockquote>
+    
+    <section class="intro">
+        <p class="sec_tag">Perfumes con alma en Medellín</p>
+        <p class="intro_texto">Somos dos compañeras con una obsesión por los aromas. Originales y réplicas premium para que cada persona encuentre su fragancia. Atención real, sin bots.</p>
+    </section>
+
+    
+    <section class="carrusel_sec">
+        <div class="sec_header">
+            <p class="sec_tag">Recién llegadas</p>
+            <h2 class="sec_titulo">Nuevas Fragancias</h2>
+        </div>
+        <div class="carrusel_viewport">
+            <div class="carrusel_track">
+
+                <div class="card">
+                    <span class="badge nuevo">NUEVO</span>
+                    <div class="card_img">
+                        <img src="Imagenes/ilmin perfume.jpeg" alt="ILMIN Il Roso">
+                        <div class="overlay">
+                            <a href="compra.html" class="overlay_btn">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <p class="card_marca">ILMIN</p>
+                        <h3 class="card_nombre">Il Roso</h3>
+                        <p class="card_des">Rosa suave, vainilla cremosa y almizcle limpio. Extrait de parfum femenino y muy duradero.</p>
+                        <p class="card_notas">Rosa · Vainilla · Almizcle</p>
+                        <div class="card_pie">
+                            <span class="precio">$320.000</span>
+                            <span class="ml">100 ml</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="badge nuevo">NUEVO</span>
+                    <div class="card_img">
+                        <img src="Imagenes/montale paris.jpeg" alt="Montale Starry Night">
+                        <div class="overlay">
+                            <a href="compra.html" class="overlay_btn">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <p class="card_marca">MONTALE</p>
+                        <h3 class="card_nombre">Starry Night</h3>
+                        <p class="card_des">Rosa profunda, pachulí y ámbar. Dulce, sensual y de larga duración.</p>
+                        <p class="card_notas">Rosa · Pachulí · Ámbar</p>
+                        <div class="card_pie">
+                            <span class="precio">$380.000</span>
+                            <span class="ml">100 ml</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="badge nuevo">NUEVO</span>
+                    <div class="card_img">
+                        <img src="Imagenes/2.jpg" alt="Set Premium 3x1 Dior">
+                        <div class="overlay">
+                            <a href="compra.html" class="overlay_btn">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <p class="card_marca">DIOR · SET PREMIUM</p>
+                        <h3 class="card_nombre">Pack 3x1 Masculino</h3>
+                        <p class="card_des">Tres íconos de la perfumería masculina en un solo set. Sauvage, 1 Million y más. Ideal como regalo o para renovar tu colección.</p>
+                        <p class="card_notas">Madera · Especias · Cuero</p>
+                        <div class="card_pie">
+                            <span class="precio">$210.000</span>
+                            <span class="ml">Set 3 uds</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="badge nuevo">NUEVO</span>
+                    <div class="card_img">
+                        <img src="Imagenes/3.jpg" alt="Set Combo Femenino">
+                        <div class="overlay">
+                            <a href="compra.html" class="overlay_btn">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <p class="card_marca">SELECCIÓN · SET</p>
+                        <h3 class="card_nombre">Pack 4 Perfumes Femeninos</h3>
+                        <p class="card_des">Cuatro fragancias femeninas cuidadosamente seleccionadas. Florales, dulces y sensuales. Incluye testers. Envío gratis.</p>
+                        <p class="card_notas">Floral · Dulce · Amaderado</p>
+                        <div class="card_pie">
+                            <span class="precio">$159.600</span>
+                            <span class="ml">Set 4 uds</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="badge nuevo">NUEVO</span>
+                    <div class="card_img">
+                        <img src="Imagenes/10.jpg" alt="Set Masculino Premium">
+                        <div class="overlay">
+                            <a href="compra.html" class="overlay_btn">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <p class="card_marca">ARMAF · SET PREMIUM</p>
+                        <h3 class="card_nombre">3 Perfumes Masculinos</h3>
+                        <p class="card_des">Tres fragancias masculinas elegantes en un set exclusivo. Odyssey, 9pm y más. Sofisticados, duraderos y de gran proyección.</p>
+                        <p class="card_notas">Ámbar · Madera · Almizcle</p>
+                        <div class="card_pie">
+                            <span class="precio">$200.000</span>
+                            <span class="ml">Set 3 uds</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="card" aria-hidden="true">
+                    <span class="badge nuevo">NUEVO</span>
+                    <div class="card_img">
+                        <img src="Imagenes/ilmin perfume.jpeg" alt="">
+                        <div class="overlay">
+                            <a href="compra.html" class="overlay_btn">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <p class="card_marca">ILMIN</p>
+                        <h3 class="card_nombre">Il Roso</h3>
+                        <p class="card_des">Rosa suave, vainilla cremosa y almizcle limpio. Extrait de parfum femenino y muy duradero.</p>
+                        <p class="card_notas">Rosa · Vainilla · Almizcle</p>
+                        <div class="card_pie">
+                            <span class="precio">$320.000</span>
+                            <span class="ml">100 ml</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" aria-hidden="true">
+                    <span class="badge nuevo">NUEVO</span>
+                    <div class="card_img">
+                        <img src="Imagenes/montale paris.jpeg" alt="perfume">
+                        <div class="overlay">
+                            <a href="compra.html" class="overlay_btn">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <p class="card_marca">MONTALE</p>
+                        <h3 class="card_nombre">Starry Night</h3>
+                        <p class="card_des">Rosa profunda, pachulí y ámbar. Dulce, sensual y de larga duración.</p>
+                        <p class="card_notas">Rosa · Pachulí · Ámbar</p>
+                        <div class="card_pie">
+                            <span class="precio">$380.000</span>
+                            <span class="ml">100 ml</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" aria-hidden="true">
+                    <span class="badge nuevo">NUEVO</span>
+                    <div class="card_img">
+                        <img src="Imagenes/art of the universe.jpeg" alt="perfume">
+                        <div class="overlay">
+                            <a href="compra.html" class="overlay_btn">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <p class="card_marca">LATTAFA</p>
+                        <h3 class="card_nombre">Art of Universe</h3>
+                        <p class="card_des">Bergamota, mandarina y jengibre picante. Fresco y vibrante. Unisex.</p>
+                        <p class="card_notas">Bergamota · Mandarina · Jengibre</p>
+                        <div class="card_pie">
+                            <span class="precio">$210.000</span>
+                            <span class="ml">100 ml</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" aria-hidden="true">
+                    <span class="badge nuevo">NUEVO</span>
+                    <div class="card_img">
+                        <img src="Imagenes/game of spades.jpeg" alt="">
+                        <div class="overlay">
+                            <a href="compra.html" class="overlay_btn">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <p class="card_marca">PARIS CORNER</p>
+                        <h3 class="card_nombre">Game of Spades Emerald</h3>
+                        <p class="card_des">Cítrico especiado, moderno y con muy buena proyección. Unisex.</p>
+                        <p class="card_notas">Cítrico · Especias · Madera</p>
+                        <div class="card_pie">
+                            <span class="precio">$185.000</span>
+                            <span class="ml">100 ml</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" aria-hidden="true">
+                    <span class="badge nuevo">NUEVO</span>
+                    <div class="card_img">
+                        <img src="Imagenes/zulian-firmansyah-rYcbOljwx10-unsplash.jpg" alt="">
+                        <div class="overlay">
+                            <a href="compra.html" class="overlay_btn">Comprar</a>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <p class="card_marca">BLANK AND BE</p>
+                        <h3 class="card_nombre">MU</h3>
+                        <p class="card_des">Pimienta negra y ámbar cálido. Fresco, moderno y con personalidad. Unisex.</p>
+                        <p class="card_notas">Pimienta · Ámbar · Madera</p>
+                        <div class="card_pie">
+                            <span class="precio">$245.000</span>
+                            <span class="ml">100 ml</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="frase">
+        <blockquote class="frase_quote">"El perfume es la forma más intensa del recuerdo."</blockquote>
         <p class="frase_autor">— Jean Paul Guerlain</p>
     </div>
 
-    <section class="coleccion" id="coleccion">
-        <div>
-            <h2 class="titulo_coleccion">Fragancias Icónicas</h2>
+    
+    <section class="descuento_sec">
+        <div class="sec_header oscuro">
+            <p class="sec_tag">Ofertas especiales</p>
+            <h2 class="sec_titulo claro">En Descuento</h2>
         </div>
+        <div class="descuento_grid">
 
-        <div class="productos_wrapper">
-
-            <div class="productos">
-                <div class="producto_card">
-                    <div class="producto_img">
-                        <img src="Imagenes/jc-media-zvqq7CG8BwY-unsplash.jpg" alt="imagen perfume">
+            <div class="card">
+                <span class="badge desc">−20%</span>
+                <div class="card_img">
+                    <img src="Imagenes/1.jpeg" alt="perfume">
+                    <div class="overlay">
+                        <a href="compra.html" class="overlay_btn">Comprar</a>
                     </div>
-                    <h3 class="producto_nombre">Frescura atemporal.</h3>
-                    <p class="producto_des">Aromático, limpio y elegante. Notas cítricas y maderas suaves. Perfecto para el día a día, versátil y con clase.</p>
-                    <a href="compra.html" class="producto_add">Comprar</a>
+                </div>
+                <div class="card_body">
+                    <p class="card_marca">CYZONE</p>
+                    <h3 class="card_nombre">Nitro</h3>
+                    <p class="card_des">Fragancia masculina fresca y vibrante, con un carácter intenso y moderno. Ideal para el hombre activo que busca dejar una impresión duradera.</p>
+                    <p class="card_notas">Bergamota · Madera · Almizcle</p>
+                    <div class="card_pie">
+                        <span class="precio">$480.000</span>
+                        <span class="precio_tachado">$600.000</span>
+                    </div>
+                    <p class="ahorro">Ahorras $120.000</p>
                 </div>
             </div>
 
-            <div class="productos">
-                <div class="producto_card">
-                    <div class="producto_img">
-                        <img src="Imagenes/laura-chouette--W7o_WC102U-unsplash.jpg" alt="imagen perfume">
+            <div class="card">
+                <span class="badge desc">−15%</span>
+                <div class="card_img">
+                    <img src="Imagenes/4.jpg" alt="perfume">
+                    <div class="overlay">
+                        <a href="compra.html" class="overlay_btn">Comprar</a>
                     </div>
-                    <h3 class="producto_nombre">Chanel Nº5</h3>
-                    <p class="producto_des">Floral aldehídico, sofisticado y atemporal. Jazmín, rosa y vainilla. Elegancia pura que nunca pasa de moda.</p>
-                    <a href="compra.html" class="producto_add">Comprar</a>
+                </div>
+                <div class="card_body">
+                    <p class="card_marca">ESIKA</p>
+                    <h3 class="card_nombre">Magnat Exclusive</h3>
+                    <p class="card_des">Oriental intenso y masculino, inspirado en la noche urbana. Maderas profundas y especias que proyectan poder y distinción.</p>
+                    <p class="card_notas">Madera · Ámbar · Almizcle</p>
+                    <div class="card_pie">
+                        <span class="precio">$510.000</span>
+                        <span class="precio_tachado">$600.000</span>
+                    </div>
+                    <p class="ahorro">Ahorras $90.000</p>
                 </div>
             </div>
 
-            <div class="productos">
-                <div class="producto_card">
-                    <div class="producto_img">
-                        <img src="Imagenes/laura-chouette-4sKdeIMiFEI-unsplash.jpg" alt="imagen perfume">
+            <div class="card">
+                <span class="badge desc">−25%</span>
+                <div class="card_img">
+                    <img src="Imagenes/5.jpg" alt="perfume">
+                    <div class="overlay">
+                        <a href="compra.html" class="overlay_btn">Comprar</a>
                     </div>
-                    <h3 class="producto_nombre">Coco Chanel</h3>
-                    <p class="producto_des">Oriental intenso con pachulí, haba tonka y vainilla. Sensual, nocturno y con mucha presencia.</p>
-                    <a href="compra.html" class="producto_add">Comprar</a>
+                </div>
+                <div class="card_body">
+                    <p class="card_marca">CHANEL</p>
+                    <h3 class="card_nombre">Bleu de Chanel</h3>
+                    <p class="card_des">Una obra maestra de la perfumería francesa. Fresco, limpio y misterioso, con una elegancia masculina que trasciende el tiempo.</p>
+                    <p class="card_notas">Limón · Cedro · Sándalo</p>
+                    <div class="card_pie">
+                        <span class="precio">$300.000</span>
+                        <span class="precio_tachado">$400.000</span>
+                    </div>
+                    <p class="ahorro">Ahorras $100.000</p>
                 </div>
             </div>
 
-            <div class="productos">
-                <div class="producto_card">
-                    <div class="producto_img">
-                        <img src="Imagenes/perfume carolina herrera.jpeg" alt="imagen perfume">
+            <div class="card">
+                <span class="badge desc">−10%</span>
+                <div class="card_img">
+                    <img src="Imagenes/8.jpg" alt="perfume">
+                    <div class="overlay">
+                        <a href="compra.html" class="overlay_btn">Comprar</a>
                     </div>
-                    <h3 class="producto_nombre">CH Carolina Herrera</h3>
-                    <p class="producto_des">Rosa, jazmín y cuero con un toque dulce de praliné. Elegante, duradero y con estela que no pasa desapercibida.</p>
-                    <a href="compra.html" class="producto_add">Comprar</a>
+                </div>
+                <div class="card_body">
+                    <p class="card_marca">VERSACE</p>
+                    <h3 class="card_nombre">Eros Flame</h3>
+                    <p class="card_des">La pasión hecha fragancia. Un aromático intenso y seductor que combina frescura cítrica con la calidez del cedro y el vetiver.</p>
+                    <p class="card_notas">Naranja · Pimienta · Madera</p>
+                    <div class="card_pie">
+                        <span class="precio">$180.000</span>
+                        <span class="precio_tachado">$200.000</span>
+                    </div>
+                    <p class="ahorro">Ahorras $20.000</p>
                 </div>
             </div>
 
-            <div class="productos">
-                <div class="producto_card">
-                    <div class="producto_img">
-                        <img src="Imagenes/ilmin perfume.jpeg" alt="imagen perfume">
-                    </div>
-                    <h3 class="producto_nombre">ILMIN Il Roso</h3>
-                    <p class="producto_des">Rosa suave, vainilla cremosa y almizcle limpio. Femenino, elegante y muy duradero. Extrait de parfum que abraza la piel.</p>
-                    <a href="compra.html" class="producto_add">Comprar</a>
-                </div>
-            </div>
-
-            <div class="productos">
-                <div class="producto_card">
-                    <div class="producto_img">
-                        <img src="Imagenes/montale paris.jpeg" alt="imagen perfume">
-                    </div>
-                    <h3 class="producto_nombre">Montale Starry Night</h3>
-                    <p class="producto_des">Rosa profunda, pachulí y ámbar. Dulce, sensual y de larga duración. Misterio en cada spray.</p>
-                    <a href="compra.html" class="producto_add">Comprar</a>
-                </div>
-            </div>
-
-            <div class="productos">
-                <div class="producto_card">
-                    <div class="producto_img">
-                        <img src="Imagenes/art of the universe.jpeg" alt="imagen perfume">
-                    </div>
-                    <h3 class="producto_nombre">Lattafa Art of Universe</h3>
-                    <p class="producto_des">Explosión cítrica de bergamota y mandarina con jengibre picante y un toque de menta. Fresco, vibrante y diferente. Unisex, moderno y con muy buena proyección.</p>
-                    <a href="compra.html" class="producto_add">Comprar</a>
-                </div>
-            </div>
-
-            <div class="productos">
-                <div class="producto_card">
-                    <div class="producto_img">
-                        <img src="Imagenes/game of spades.jpeg" alt="imagen perfume">
-                    </div>
-                    <h3 class="producto_nombre">Game of Spades Emerald</h3>
-                    <p class="producto_des">Explosión cítrica de bergamota y mandarina con jengibre picante y un toque de menta. Fresco, vibrante y diferente. Unisex, moderno y con muy buena proyección.</p>
-                    <a href="compra.html" class="producto_add">Comprar</a>
-                </div>
-            </div>
-
-            <div class="productos">
-                <div class="producto_card">
-                    <div class="producto_img">
-                        <img src="Imagenes/zulian-firmansyah-rYcbOljwx10-unsplash.jpg" alt="imagen perfume">
-                    </div>
-                    <h3 class="producto_nombre">Blank and Be MU</h3>
-                    <p class="producto_des">Cítrico especiado con pimienta negra y ámbar cálido. Fresco, moderno y unisex. Limpio, elegante y con personalidad.</p>
-                    <a href="compra.html" class="producto_add">Comprar</a>
-                </div>
-            </div>
         </div>
     </section>
 
-    <footer class="brand">
-        <span class="footer_logo">Aromas Con Historia</span>
-        <p>Elige ser inolvidable</p>
+    
+    <section class="coleccion coleccion_oscura" id="coleccion">
+        <div class="sec_header">
+            <p class="sec_tag">Catálogo</p>
+            <h2 class="sec_titulo claro">Fragancias Icónicas</h2>
+        </div>
+        <div class="grid3 grid3_oscuro">
+
+            <div class="card">
+                <div class="card_img">
+                    <img src="Imagenes/3 (1).jpg" alt="Perfume artístico colorido">
+                    <div class="overlay">
+                        <a href="compra.html" class="overlay_btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <p class="card_marca">SELECCIÓN ESPECIAL</p>
+                    <h3 class="card_nombre">Mystique Blue</h3>
+                    <p class="card_des">Una fragancia unisex audaz y artística. Fresca, vibrante y con una personalidad única que desafía lo convencional.</p>
+                    <p class="card_notas">Bergamota · Iris · Almizcle</p>
+                    <div class="card_pie">
+                        <span class="precio">$200.000</span>
+                        <span class="ml">100 ml</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_img">
+                    <img src="Imagenes/20.jpg" alt="Perfume árabe oud dorado">
+                    <div class="overlay">
+                        <a href="compra.html" class="overlay_btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <p class="card_marca">OUD COLLECTION</p>
+                    <h3 class="card_nombre">Royal Oud</h3>
+                    <p class="card_des">Opulencia árabe en estado puro. Oud ahumado, rosa de Taif y resinas orientales. Para quienes buscan lo extraordinario.</p>
+                    <p class="card_notas">Oud · Rosa · Ámbar</p>
+                    <div class="card_pie">
+                        <span class="precio">$480.000</span>
+                        <span class="ml">100 ml</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_img">
+                    <img src="Imagenes/22.jpg" alt="Perfume oriental dorado">
+                    <div class="overlay">
+                        <a href="compra.html" class="overlay_btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <p class="card_marca">MIDDLE EAST</p>
+                    <h3 class="card_nombre">Golden Elixir</h3>
+                    <p class="card_des">Cálido y envolvente. Especias orientales, vainilla y madera de sándalo que crean una estela irresistible y duradera.</p>
+                    <p class="card_notas">Especias · Sándalo · Vainilla</p>
+                    <div class="card_pie">
+                        <span class="precio">$390.000</span>
+                        <span class="ml">100 ml</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_img">
+                    <img src="Imagenes/24.jpg" alt="Perfume azul marino acuático">
+                    <div class="overlay">
+                        <a href="compra.html" class="overlay_btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <p class="card_marca">ACQUA · MARINO</p>
+                    <h3 class="card_nombre">Océan Bleu</h3>
+                    <p class="card_des">Fresco, marino y sofisticado. Notas acuáticas con un corazón de madera que evoca la libertad del mar abierto.</p>
+                    <p class="card_notas">Acuático · Cedro · Almizcle</p>
+                    <div class="card_pie">
+                        <span class="precio">$350.000</span>
+                        <span class="ml">100 ml</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_img">
+                    <img src="Imagenes/200707-800-auto.jpg" alt="Chanel Coco Mademoiselle">
+                    <div class="overlay">
+                        <a href="compra.html" class="overlay_btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <p class="card_marca">CHANEL</p>
+                    <h3 class="card_nombre">Coco Mademoiselle</h3>
+                    <p class="card_des">Icónico oriental fresco de la maison Chanel. Pachulí oscuro, haba tonka y vainilla que envuelven con sensualidad y sofisticación nocturna.</p>
+                    <p class="card_notas">Pachulí · Tonka · Vainilla</p>
+                    <div class="card_pie">
+                        <span class="precio">$600.000</span>
+                        <span class="ml">100 ml</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_img">
+                    <img src="Imagenes/1102712-800-800.jpg" alt="Perfume azul acuático">
+                    <div class="overlay">
+                        <a href="compra.html" class="overlay_btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <p class="card_marca">SELECCIÓN AZUL</p>
+                    <h3 class="card_nombre">Aqua Vitae</h3>
+                    <p class="card_des">Masculino, refrescante y limpio. Una composición acuática con notas cítricas y fondo amaderado de larga duración.</p>
+                    <p class="card_notas">Cítrico · Marino · Madera</p>
+                    <div class="card_pie">
+                        <span class="precio">$280.000</span>
+                        <span class="ml">100 ml</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_img">
+                    <img src="Imagenes/23.jpg" alt="Perfume gris plateado masculino">
+                    <div class="overlay">
+                        <a href="compra.html" class="overlay_btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <p class="card_marca">SELECCIÓN CLÁSICA</p>
+                    <h3 class="card_nombre">Silver Edition</h3>
+                    <p class="card_des">Elegancia masculina atemporal. Notas frescas y especiadas sobre un fondo de cuero y madera que proyectan distinción.</p>
+                    <p class="card_notas">Especias · Cuero · Vetiver</p>
+                    <div class="card_pie">
+                        <span class="precio">$310.000</span>
+                        <span class="ml">100 ml</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_img">
+                    <img src="Imagenes/mejores-perfumes-para-hombres-7.jpg" alt="Salvatore Ferragamo Acqua Essenziale">
+                    <div class="overlay">
+                        <a href="compra.html" class="overlay_btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <p class="card_marca">FERRAGAMO</p>
+                    <h3 class="card_nombre">Acqua Essenziale</h3>
+                    <p class="card_des">Frescura mediterránea con un alma italiana. Limón, lavanda y madera de cedro en una fragancia masculina ligera y refinada.</p>
+                    <p class="card_notas">Limón · Lavanda · Cedro</p>
+                    <div class="card_pie">
+                        <span class="precio">$320.000</span>
+                        <span class="ml">100 ml</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+    <section class="porque">
+        <div class="sec_header">
+            <p class="sec_tag">¿Por qué nosotras?</p>
+            <h2 class="sec_titulo">Sin rodeos, esto es lo que ofrecemos</h2>
+        </div>
+        <div class="porque_grid">
+
+            <div class="porque_item">
+                <div class="porque_ico">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6 6l1.27-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                </div>
+                <h3>Atención real</h3>
+                <p>Te responde una persona, no un bot. Rápido y sin vueltas.</p>
+            </div>
+
+            <div class="porque_item">
+                <div class="porque_ico">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="6"/>
+                        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+                    </svg>
+                </div>
+                <h3>Originales y réplicas</h3>
+                <p>Sin juicios. Tú decides cuánto invertir. Nosotras te damos las opciones.</p>
+            </div>
+
+            <div class="porque_item">
+                <div class="porque_ico">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+                <h3>Envíos a Medellín</h3>
+                <p>Tu pedido llega bien empacado, seguro y con seguimiento.</p>
+            </div>
+
+            <div class="porque_item">
+                <div class="porque_ico">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                </div>
+                <h3>Empaque con amor</h3>
+                <p>Cada pedido va cuidado como si fuera nuestro. Siempre premium.</p>
+            </div>
+
+        </div>
+    </section>
+
+        <footer class="brand">
+        <div class="footer_col footer_col_left">
+            <span class="footer_logo">Aromas Con Historia</span>
+            <p class="footer_eslogan">Elige ser inolvidable</p>
+            <div class="footer_info">
+                <div class="footer_info_item">
+                    <span>Medellín, Colombia</span>
+                </div>
+                <div class="footer_info_item">
+                    <span>Lun – Vie · 9:00 am – 7:00 pm</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer_col footer_col_center">
+            <div class="footer_center_inner">
+                <span class="footer_divider_label">Navega</span>
+                <nav class="footer_links">
+                    <a href="index.html">Inicio</a>
+                    <a href="index.html#coleccion">Fragancias</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contactanos.html">Contacto</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer_col footer_col_right">
+            <div class="footer_contacto">
+                <span class="footer_contacto_label">Escríbenos</span>
+                <div class="footer_whatsapp" target="_blank">
+                    +57 317 3820834
+                <a href="compra.html" class="footer_pedido">Hacer un pedido →</a>
+            </div>
+        </div>
     </footer>
+
     <div class="footer_bottom">
-        <span>© 2026 Aromas Con Historia. Todos los derechos reservados.</span>
+        <span>© 2026 Aromas Con Historia · Medellín, Colombia · Todos los derechos reservados.</span>
     </div>
+
+    <a href="compra.html" class="carrito_flotante" aria-label="Realizar pedido">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+    </a>
 
 </body>
 </html>

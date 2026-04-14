@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Envío | Aromas Con Historia</title>
+    <link rel="shortcut icon" href="Imagenes/logo_icono.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/confirmacion.css">
+</head>
+<body class="conf_body">
+
+    <nav>
+        <div class="nav_logo">Aromas Con Historia</div>
+        <input type="checkbox" id="menu_toggle" class="menu_toggle">
+        <label for="menu_toggle" class="hamburguesa">
+            <img src="Imagenes/list.svg" alt="menu">
+        </label>
+        <ul class="nav_links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#coleccion">Fragancias</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="contactanos.html">Contáctanos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="conf_hero">
+        <div class="conf_hero_contenido">
+            <p class="conf_hero_tag">Último paso</p>
+            <h1 class="conf_hero_titulo">Detalles<br>de envío</h1>
+            <p class="conf_hero_sub">Elige cómo quieres recibir tu fragancia y confirma los datos de entrega.</p>
+        </div>
+    </section>
+
+    <!-- Cuerpo principal: formularios y resumen -->
+    <section class="conf_contenido">
+
+        <div class="conf_formularios">
+
+            <!-- Sección 1: Transportadora -->
+            <div class="conf_seccion">
+                <h2 class="conf_seccion_titulo">¿Cómo lo enviamos?</h2>
+                <p class="conf_seccion_sub">Selecciona el servicio de transporte de tu preferencia. El costo se sumará al total.</p>
+
+                <div class="trans_grid">
+                    <label class="trans_opcion">
+                        <input type="radio" name="transportadora" value="servientrega" data-precio="8000" checked>
+                        <div class="trans_card">
+                            <div class="trans_check">
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+                            </div>
+                            <span class="trans_nombre">Servientrega</span>
+                            <span class="trans_desc">Cobertura nacional, seguimiento en línea incluido.</span>
+                            <span class="trans_precio">$8.000</span>
+                            <span class="trans_tiempo">2 – 4 días hábiles</span>
+                        </div>
+                    </label>
+
+                    <label class="trans_opcion">
+                        <input type="radio" name="transportadora" value="coordinadora" data-precio="7000">
+                        <div class="trans_card">
+                            <div class="trans_check">
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+                            </div>
+                            <span class="trans_nombre">Coordinadora</span>
+                            <span class="trans_desc">Económica y confiable. Llega a toda Colombia.</span>
+                            <span class="trans_precio">$7.000</span>
+                            <span class="trans_tiempo">3 – 5 días hábiles</span>
+                        </div>
+                    </label>
+
+                    <label class="trans_opcion">
+                        <input type="radio" name="transportadora" value="interrapidisimo" data-precio="9000">
+                        <div class="trans_card">
+                            <div class="trans_check">
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+                            </div>
+                            <span class="trans_nombre">Interrapidísimo</span>
+                            <span class="trans_desc">Amplia cobertura, especialmente en ciudades intermedias.</span>
+                            <span class="trans_precio">$9.000</span>
+                            <span class="trans_tiempo">3 – 5 días hábiles</span>
+                        </div>
+                    </label>
+
+                    <label class="trans_opcion">
+                        <input type="radio" name="transportadora" value="tcc" data-precio="10500">
+                        <div class="trans_card">
+                            <div class="trans_check">
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+                            </div>
+                            <span class="trans_nombre">TCC Express</span>
+                            <span class="trans_desc">Servicio prioritario, máxima velocidad de entrega.</span>
+                            <span class="trans_precio">$10.500</span>
+                            <span class="trans_tiempo">1 – 2 días hábiles</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Dirección de entrega -->
+            <div class="conf_seccion">
+                <h2 class="conf_seccion_titulo">Dirección de entrega</h2>
+                <p class="conf_seccion_sub">Verifica y completa los datos de envío para tu pedido.</p>
+
+                <div class="conf_campos">
+                    <div class="conf_fila">
+                        <div class="cf_grupo">
+                            <label class="cf_label">Nombre del destinatario</label>
+                            <input class="cf_input" id="ent_nombre" type="text" placeholder="Quien recibe el pedido">
+                        </div>
+                        <div class="cf_grupo">
+                            <label class="cf_label">Teléfono de contacto</label>
+                            <input class="cf_input" id="ent_telefono" type="tel" placeholder="Número de contacto">
+                        </div>
+                    </div>
+                    <div class="conf_fila">
+                        <div class="cf_grupo">
+                            <label class="cf_label">Departamento</label>
+                            <select class="cf_select" id="ent_depto">
+                                <option value="">Selecciona un departamento</option>
+                                <option value="antioquia">Antioquia</option>
+                                <option value="cundinamarca">Cundinamarca</option>
+                                <option value="valle">Valle del Cauca</option>
+                                <option value="atlantico">Atlántico</option>
+                                <option value="bolivar">Bolívar</option>
+                                <option value="santander">Santander</option>
+                                <option value="narino">Nariño</option>
+                                <option value="otro">Otro departamento</option>
+                            </select>
+                        </div>
+                        <div class="cf_grupo">
+                            <label class="cf_label">Ciudad / Municipio</label>
+                            <input class="cf_input" id="ent_ciudad" type="text" placeholder="Tu ciudad">
+                        </div>
+                    </div>
+                    <div class="cf_grupo">
+                        <label class="cf_label">Dirección completa</label>
+                        <input class="cf_input" id="ent_direccion" type="text" placeholder="Calle, número, barrio">
+                    </div>
+                    <div class="cf_grupo">
+                        <label class="cf_label">Indicaciones adicionales <span class="cf_opcional">(opcional)</span></label>
+                        <textarea class="cf_textarea" id="ent_indicaciones" placeholder="Apartamento, punto de referencia, instrucciones para el mensajero…"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pago -->
+            <div class="conf_seccion">
+                <h2 class="conf_seccion_titulo">Método de pago</h2>
+                <p class="conf_seccion_sub">Coordinamos el pago contigo antes del despacho. Elige tu preferencia.</p>
+
+                <div class="conf_campos">
+                    <div class="cf_grupo">
+                        <label class="cf_label">¿Cómo prefieres pagar?</label>
+                        <select class="cf_select" id="ent_pago">
+                            <option value="">Selecciona un método</option>
+                            <option value="nequi">Nequi</option>
+                            <option value="daviplata">Daviplata</option>
+                            <option value="transferencia">Transferencia bancaria</option>
+                            <option value="contra_entrega">Pago contra entrega</option>
+                            <option value="efectivo_punto">Efectivo (punto de pago)</option>
+                        </select>
+                    </div>
+                    <label class="cf_check_grupo">
+                        <input type="checkbox" id="check_factura">
+                        <div class="cf_check_box">
+                            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+                        </div>
+                        <span class="cf_check_txt">Necesito factura electrónica para esta compra</span>
+                    </label>
+                    <label class="cf_check_grupo">
+                        <input type="checkbox" id="check_regalo">
+                        <div class="cf_check_box">
+                            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+                        </div>
+                        <span class="cf_check_txt">Es un regalo — por favor no incluir precio en el empaque</span>
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Resumen lateral -->
+        <aside class="conf_resumen">
+            <div class="conf_resumen_card">
+                <p class="conf_resumen_tag">Tu pedido</p>
+
+                <div class="conf_prod_row">
+                    <div class="conf_prod_img">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(196,149,106,0.8)" stroke-width="1.2">
+                            <path d="M12 2C9.5 2 7.5 3.5 7 6H4v14a2 2 0 002 2h12a2 2 0 002-2V6h-3c-.5-2.5-2.5-4-5-4z"/>
+                            <path d="M9 11s1 1 3 1 3-1 3-1"/>
+                        </svg>
+                    </div>
+                    <div class="conf_prod_info">
+                        <p class="conf_prod_marca" id="res_marca">MARCA</p>
+                        <p class="conf_prod_nombre" id="res_nombre">Nombre del Perfume</p>
+                        <p class="conf_prod_meta">100 ml · Original / Réplica</p>
+                    </div>
+                </div>
+
+                <!-- Datos del comprador -->
+                <div class="conf_datos_cliente" id="bloque_datos">
+                    <div class="conf_dato_fila">
+                        <span class="conf_dato_label">Cliente</span>
+                        <span class="conf_dato_val" id="res_nombre_cliente">—</span>
+                    </div>
+                    <div class="conf_dato_fila">
+                        <span class="conf_dato_label">WhatsApp</span>
+                        <span class="conf_dato_val" id="res_telefono">—</span>
+                    </div>
+                    <div class="conf_dato_fila">
+                        <span class="conf_dato_label">Ciudad</span>
+                        <span class="conf_dato_val" id="res_ciudad">—</span>
+                    </div>
+                </div>
+
+                <!-- Precios -->
+                <div class="conf_precio_lineas">
+                    <div class="conf_precio_fila">
+                        <span>Subtotal</span>
+                        <span>$123.000</span>
+                    </div>
+                    <div class="conf_precio_fila">
+                        <span>Envío</span>
+                        <span class="val_env" id="res_envio">$8.000</span>
+                    </div>
+                    <div class="conf_precio_fila conf_precio_total">
+                        <span>Total</span>
+                        <span class="val_dorado" id="res_total">$131.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="conf_btn_enviar" id="btn_final">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg>
+                Confirmar y enviar pedido
+            </button>
+        </aside>
+
+    </section>
+
+    <footer class="brand">
+        <div class="footer_col footer_col_left">
+            <span class="footer_logo">Aromas Con Historia</span>
+            <p class="footer_eslogan">Elige ser inolvidable</p>
+            <div class="footer_info">
+                <div class="footer_info_item">
+                    <span>Medellín, Colombia</span>
+                </div>
+                <div class="footer_info_item">
+                    <span>Lun – Vie · 9:00 am – 7:00 pm</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer_col footer_col_center">
+            <div class="footer_center_inner">
+                <span class="footer_divider_label">Navega</span>
+                <nav class="footer_links">
+                    <a href="index.html">Inicio</a>
+                    <a href="index.html#coleccion">Fragancias</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contactanos.html">Contacto</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer_col footer_col_right">
+            <div class="footer_contacto">
+                <span class="footer_contacto_label">Escríbenos</span>
+                <div class="footer_whatsapp" target="_blank">
+                    +57 317 3820834
+                <a href="compra.html" class="footer_pedido">Hacer un pedido →</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer_bottom">
+        <span>© 2026 Aromas Con Historia · Medellín, Colombia · Todos los derechos reservados.</span>
+    </div>
+
+</body>
+</html>

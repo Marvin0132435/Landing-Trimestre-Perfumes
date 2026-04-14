@@ -8,14 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/nosotros.css">
 </head>
-<body>
+<body class="nos_body">
 
+    <!-- Barra de navegación principal -->
     <nav>
         <div class="nav_logo">Aromas Con Historia</div>
         <input type="checkbox" id="menu_toggle" class="menu_toggle">
-        <label for="menu_toggle" class="hamburguesa"><img src="Imagenes/list.svg" alt="menu"></label>
+        <label for="menu_toggle" class="hamburguesa">
+            <img src="Imagenes/list.svg" alt="menu">
+        </label>
         <ul class="nav_links">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="index.html#coleccion">Fragancias</a></li>
@@ -24,50 +28,125 @@
         </ul>
     </nav>
 
+    <!-- Hero -->
     <section class="nos_hero">
-        <h1 class="nos_tag">Nuestra historia</h1>
-        </section>
-
-    <section class="nos_historia">
-        <h2 class="nos_historia_titulo">¿Cómo empezamos?</h2>
-        <p class="nos_historia_par">somos dos compañeras con una obsesión por los aromas y ganas de emprender.</p>
-        <p class="nos_historia_par">Nos dimos cuenta de que una réplica de perfume bien hecha huele igual que el original.</p>
-        <p class="nos_historia_par">No tenemos bodega enorme ni publicidad costosa. Tenemos WhatsApp, buenas reseñas y ganas de que cada cliente quede feliz.</p>
+        <div class="nos_hero_contenido">
+            <p class="nos_tag">Nuestra historia</p>
+            <h1 class="nos_titulo">Dos amigas,<br>un aroma.</h1>
+            <p class="nos_subtitulo">Nació de una obsesión por los perfumes y las ganas de hacer algo propio.</p>
+        </div>
     </section>
 
+    <!-- Historia: dos columnas — texto a la izquierda, fundadoras a la derecha -->
+    <section class="nos_historia">
+
+        <!-- Columna izquierda: el relato -->
+        <div class="nos_historia_texto">
+            <p class="nos_historia_label">¿Cómo empezamos?</p>
+            <h2 class="nos_historia_titulo">Una idea que<br>olía a algo grande.</h2>
+            <p class="nos_historia_par">Somos Valentina y Sara, dos compañeras con una obsesión por los aromas y ganas de emprender.</p>
+            <p class="nos_historia_par">Nos dimos cuenta de que una réplica de perfume bien hecha huele igual que el original — y decidimos compartir ese descubrimiento con Medellín.</p>
+            <p class="nos_historia_par">No tenemos bodega enorme ni publicidad costosa. Tenemos buenas reseñas y ganas de que cada cliente quede feliz.</p>
+        </div>
+
+        <!-- Columna derecha: fundadoras-->
+        <div class="nos_historia_fundadoras">
+            <div class="nos_fundadora">
+                <div class="nos_fundadora_info">
+                    <span class="nos_fundadora_nombre">Valentina Gaviria</span>
+                    <span class="nos_fundadora_rol">Cofundadora · Socia de fragancias</span>
+                </div>
+            </div>
+            <div class="nos_fundadora_linea"></div>
+            <div class="nos_fundadora">
+                <div class="nos_fundadora_info">
+                    <span class="nos_fundadora_nombre">Sara</span>
+                    <span class="nos_fundadora_rol">Cofundadora · Atención al cliente y logística de marketing</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Por qué elegirnos-->
     <section class="nos_porque">
-        <p class="nos_tag_oscuro">¿Por qué elegirnos?</p>
-        <h2 class="nos_porque_titulo">Sin rodeos, esto es lo que ofrecemos</h2>
+        <div class="nos_porque_header">
+            <p class="nos_porque_tag">¿Por qué elegirnos?</p>
+            <h2 class="nos_porque_titulo">Sin rodeos,<br>esto es lo que ofrecemos</h2>
+        </div>
+
         <div class="nos_porque_grid">
+
+            
             <div class="nos_porque_card">
                 <h3 class="nos_porque_card_titulo">Atención real</h3>
-                <p class="nos_porque_card_texto">Te responde una persona, no un bot. Por WhatsApp, rápido y sin vueltas.</p>
+                <p class="nos_porque_card_texto">Te responde una persona, no un bot. Rápido y sin vueltas.</p>
             </div>
-            <div class="nos_porque_card">
+
+        
+            <div class="nos_porque_card nos_porque_card_mid">
                 <h3 class="nos_porque_card_titulo">Originales y réplicas</h3>
-                <p class="nos_porque_card_texto">Sin juicios. Tú decides cuánto quieres invertir. Nosotros te damos las opciones.</p>
+                <p class="nos_porque_card_texto">Sin juicios. Tú decides cuánto quieres invertir. Nosotras te damos las opciones.</p>
             </div>
+
+            
             <div class="nos_porque_card">
-                <h3 class="nos_porque_card_titulo">Envíos a todo Medellin</h3>
+                <h3 class="nos_porque_card_titulo">Envíos a Medellín</h3>
                 <p class="nos_porque_card_texto">Tu pedido llega bien empacado, seguro y con seguimiento.</p>
             </div>
+
         </div>
     </section>
 
+    <!-- CTA final: oscuro con botones destacados -->
     <section class="nos_cta">
-        <h2 class="nos_cta_titulo">Escríbenos o explora el catálogo</h2>
-        <div class="nos_cta_botones">
-            <a href="contactanos.html" class="btn_primario">Contáctanos</a>
-            <a href="index.html" class="btn_secundario">Ver Colección</a>
+        <div class="nos_cta_inner">
+            <p class="nos_cta_tag">¿Lista para oler increíble?</p>
+            <h2 class="nos_cta_titulo">Escríbenos o explora<br>el catálogo</h2>
+            <div class="nos_cta_botones">
+                <a href="contactanos.html" class="nos_btn_primario">Contáctanos</a>
+                <a href="index.html" class="nos_btn_secundario">Ver Colección</a>
+            </div>
         </div>
     </section>
 
-    <footer class="brand">
-        <span class="footer_logo">Aromas Con Historia</span>
-        <p>Elige ser inolvidable</p>
+    <!-- Footer -->
+             <footer class="brand">
+        <div class="footer_col footer_col_left">
+            <span class="footer_logo">Aromas Con Historia</span>
+            <p class="footer_eslogan">Elige ser inolvidable</p>
+            <div class="footer_info">
+                <div class="footer_info_item">
+                    <span>Medellín, Colombia</span>
+                </div>
+                <div class="footer_info_item">
+                    <span>Lun – Vie · 9:00 am – 7:00 pm</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer_col footer_col_center">
+            <div class="footer_center_inner">
+                <span class="footer_divider_label">Navega</span>
+                <nav class="footer_links">
+                    <a href="index.html">Inicio</a>
+                    <a href="index.html#coleccion">Fragancias</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contactanos.html">Contacto</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer_col footer_col_right">
+            <div class="footer_contacto">
+                <span class="footer_contacto_label">Escríbenos</span>
+                <div class="footer_whatsapp" target="_blank">
+                    +57 317 3820834
+                <a href="compra.html" class="footer_pedido">Hacer un pedido →</a>
+            </div>
+        </div>
     </footer>
+
     <div class="footer_bottom">
-        <span>© 2026 Aromas Con Historia. Todos los derechos reservados.</span>
+        <span>© 2026 Aromas Con Historia · Medellín, Colombia · Todos los derechos reservados.</span>
     </div>
 
 </body>

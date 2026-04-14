@@ -8,14 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/compra.css">
 </head>
-<body>
+<body class="compra_body">
 
     <nav>
         <div class="nav_logo">Aromas Con Historia</div>
         <input type="checkbox" id="menu_toggle" class="menu_toggle">
-        <label for="menu_toggle" class="hamburguesa"><img src="Imagenes/list.svg" alt="menu"></label>
+        <label for="menu_toggle" class="hamburguesa">
+            <img src="Imagenes/list.svg" alt="menu">
+        </label>
         <ul class="nav_links">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="index.html#coleccion">Fragancias</a></li>
@@ -24,65 +27,119 @@
         </ul>
     </nav>
 
-    <section class="con_hero">
-        <p class="nos_tag">Casi listo</p>
-        <h1 class="nos_titulo">Realiza tu pedido</h1>
-        <p class="nos_subtitulo">Completa tus datos y nos ponemos en contacto contigo para coordinar el pago y envío.</p>
+    <section class="compra_hero">
+        <div class="compra_hero_contenido">
+            <p class="compra_hero_tag">Casi listo</p>
+            <h1 class="compra_hero_titulo">Realiza tu<br>pedido</h1>
+            <p class="compra_hero_sub">Completa tus datos y nos ponemos en contacto para coordinar el pago y envío.</p>
+        </div>
     </section>
 
     <section class="compra_contenido">
-        <div class="compra_resumen">
-            <p class="con_seccion_tag">Tu selección</p>
-            <h2 class="con_seccion_titulo">Resumen del pedido</h2>
+
+        <div class="compra_lado_oscuro">
+            <p class="compra_lado_tag">Tu selección</p>
+            <h2 class="compra_lado_titulo">Resumen<br>del pedido</h2>
 
             <div class="compra_producto">
-                <div class="compra_producto_info">
-                    <h3 class="compra_producto_nombre">Nombre del perfume</h3>
-                    <p class="compra_producto_det">Fragancia · 100ml</p>
-                    <p class="compra_producto_det">Tipo: Original / Réplica</p>
+                <p class="compra_producto_marca">MARCA</p>
+                <h3 class="compra_producto_nombre">Nombre del Perfume</h3>
+                <p class="compra_producto_descripcion">Una fragancia cálida y envolvente con notas de rosa, vainilla y almizcle. Larga duración, ideal para el día a día y ocasiones especiales.</p>
+                <div class="compra_producto_meta">
+                    <span class="compra_producto_detalle">100 ml</span>
+                    <span class="compra_producto_detalle">Original / Réplica</span>
+                    <span class="compra_producto_detalle">3–5 días de entrega</span>
+                </div>
+                <div class="compra_producto_precio_fila">
+                    <span class="compra_producto_precio_label">Total</span>
+                    <span class="compra_precio">$123.000</span>
                 </div>
             </div>
 
-        <div class="compra_form">
-            <p class="con_seccion_tag">Tus datos</p>
-            <h2 class="con_seccion_titulo">¿A quién le enviamos?</h2>
+            <div class="compra_garantias">
+                <div class="compra_garantia">
+                    <div>
+                        <strong>Compra segura</strong>
+                        <span>Coordinaremos pago y envío por WhatsApp</span>
+                    </div>
+                </div>
+                <div class="compra_garantia">
+                    <div>
+                        <strong>Envío a Medellín</strong>
+                        <span>Empacado con cuidado, con seguimiento</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="compra_lado_crema">
+            <p class="compra_form_tag">Tus datos</p>
+            <h2 class="compra_form_titulo">¿A quién<br>le enviamos?</h2>
 
             <div class="con_campo">
                 <label class="con_label">Nombre completo</label>
-                <input class="con_input" type="text" placeholder="Tu nombre">
+                <input class="con_input" id="campo_nombre" type="text" placeholder="Tu nombre" required>
             </div>
-
             <div class="con_campo">
                 <label class="con_label">Teléfono / WhatsApp</label>
-                <input class="con_input" type="tel" placeholder="Numero">
+                <input class="con_input" id="campo_telefono" type="tel" placeholder="Número" required>
             </div>
-
             <div class="con_campo">
                 <label class="con_label">Ciudad</label>
-                <input class="con_input" type="text" placeholder="Tu ciudad">
+                <input class="con_input" id="campo_ciudad" type="text" placeholder="Tu ciudad" required>
             </div>
-
             <div class="con_campo">
                 <label class="con_label">Dirección de entrega</label>
-                <input class="con_input" type="text" placeholder="Calle, barrio, número">
+                <input class="con_input" id="campo_direccion" type="text" placeholder="Calle, barrio, número" required>
             </div>
-
             <div class="con_campo">
-                <label class="con_label">Nota adicional (opcional)</label>
-                <textarea class="con_textarea" placeholder="¿Algo que debamos saber?"></textarea>
+                <label class="con_label">Nota adicional <span class="compra_opcional">(opcional)</span></label>
+                <textarea class="con_textarea" id="campo_nota" placeholder="¿Algo que debamos saber?"></textarea>
             </div>
 
-            <button class="con_enviar">Confirmar pedido</button>
+            <button class="con_enviar" id="btn_confirmar" type="button">
+                <a href="Confirmacion.html" class="con_pedido">Confirmar pedido</a>
+            </button>
         </div>
 
     </section>
 
-    <footer class="brand">
-        <span class="footer_logo">Aromas Con Historia</span>
-        <p>Elige ser inolvidable</p>
+                 <footer class="brand">
+        <div class="footer_col footer_col_left">
+            <span class="footer_logo">Aromas Con Historia</span>
+            <p class="footer_eslogan">Elige ser inolvidable</p>
+            <div class="footer_info">
+                <div class="footer_info_item">
+                    <span>Medellín, Colombia</span>
+                </div>
+                <div class="footer_info_item">
+                    <span>Lun – Vie · 9:00 am – 7:00 pm</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer_col footer_col_center">
+            <div class="footer_center_inner">
+                <span class="footer_divider_label">Navega</span>
+                <nav class="footer_links">
+                    <a href="index.html">Inicio</a>
+                    <a href="index.html#coleccion">Fragancias</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contactanos.html">Contacto</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer_col footer_col_right">
+            <div class="footer_contacto">
+                <span class="footer_contacto_label">Escríbenos</span>
+                <div class="footer_whatsapp" target="_blank">
+                    +57 317 3820834
+                <a href="compra.html" class="footer_pedido">Hacer un pedido →</a>
+            </div>
+        </div>
     </footer>
+
     <div class="footer_bottom">
-        <span>© 2026 Aromas Con Historia. Todos los derechos reservados.</span>
+        <span>© 2026 Aromas Con Historia · Medellín, Colombia · Todos los derechos reservados.</span>
     </div>
 
 </body>
